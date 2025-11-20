@@ -15,8 +15,8 @@ test("Create post using static body",async ({request})=>{
 
 
   const requestBody = {
-    "firstname" : faker.person.firstName,
-    "lastname" : faker.person.lastName,
+    "firstname" : faker.person.firstName(),
+    "lastname" : faker.person.lastName(),
     "totalprice" : faker.number.int({min:100,max:200}),
     "depositpaid" : faker.datatype.boolean(),
     "bookingdates" : {

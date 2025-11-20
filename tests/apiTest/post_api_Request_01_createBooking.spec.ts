@@ -3,10 +3,16 @@ Test: create booking
 Request: Post
 Request body:static
 
+
+Pre req: instal faker-js librayr
+npm install @faker-js/faker
+
+install luxon -is alibrary for working with dates and times in javascript
+npm install luxon
+
 */
 
 import { test,expect } from "@playwright/test";
-import fs from 'fs';
 test("Create post using static body",async ({request})=>{
     const requestBody={
         "firstname" : "Jim",
