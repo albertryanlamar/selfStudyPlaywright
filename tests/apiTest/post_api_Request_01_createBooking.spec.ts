@@ -33,7 +33,8 @@ test("Create post using static body",async ({request})=>{
 
     //validate status
     expect(response.ok()).toBeTruthy();
-    expect(response.status()).toEqual(200);
+
+        expect(response.status()).toEqual(200);
     
     const responsedBody = await response.json();
     console.log("Response Body",responsedBody);

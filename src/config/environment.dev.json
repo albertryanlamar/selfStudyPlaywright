@@ -1,3 +1,4 @@
 {
-    "baseUrl":"https://reqres.in/api"   
+    "baseUrl1":"https://reqres.in/api",
+    "baseUrl2":"https://restful-booker.herokuapp.com" 
 }
