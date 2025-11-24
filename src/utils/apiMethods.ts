@@ -17,7 +17,7 @@ export class apiMethods{
             console.log("Initialized baseURL:", envConfig.baseUrl2);
         }
         else{
-            console.log("Initialized baseURL not set");
+            console.error("❌ Initialized baseURL not set");
         }
     }
     
@@ -33,7 +33,10 @@ export class apiMethods{
 
     // method for update
     async update(url:string,options:{data?:any,headers?:any,params?:any}={}){
-        return await this.client.put(url,options)
+        return await this.client.put(url,options);
+    }
+    async delete(url:string,options:{data?:any,headers?:any,params?:any}={}){
+        return await this.client.delete(url,options);
     }
     
 }

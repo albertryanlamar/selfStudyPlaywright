@@ -8,7 +8,6 @@ import method from '../../src/utils/apiMethods';
 import { envConfig } from '../../src/config/environment';
 import validate from '../../src/utils/validations';
 import filer from '../../src/utils/readFile';
-import { head } from 'axios';
 
 test.beforeAll(async ()=>{
 await method.init(envConfig.baseUrl2);
@@ -42,7 +41,6 @@ test('Update Booking (Put)',async ()=>{
         data:reqBody,
         headers:{
                  "Cookie":`token=${tokeBody}`,
-                 "Content-Type":"application/json"
                 }
      }
      console.log("data:",reWrap);
