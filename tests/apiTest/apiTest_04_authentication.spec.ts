@@ -29,7 +29,7 @@ test('Basic Auth',async ()=>{
 }) */
 
 test('Bearer Token',async ()=>{
-    const token= "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";
+   // const token= "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";
     const res = await method.gets(`https://api.github.com/user/repos`,{
         headers:{
                 Authorization:`Bearer ${token}`
