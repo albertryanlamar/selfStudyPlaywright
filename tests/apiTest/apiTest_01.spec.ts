@@ -4,8 +4,7 @@ import { envConfig } from '../../src/config/environment';
 import assert from '../../src/utils/assert';
 import validate from '../../src/utils/validations';
 
-test('Test Get Booking API with path parameters',async()=>{
-
+test('Test Get Booking API with path parameters',async(page)=>{
    const bookingId = 49;
    await method.init(envConfig.baseUrl2);
    const res = await method.gets(`/booking/${bookingId}`);

@@ -14,7 +14,7 @@ export class apiMethods{
             this.client = await request.newContext({
                 baseURL:base, // use default if no base provided
             });
-            console.log("Initialized baseURL:", envConfig.baseUrl2);
+            console.log("Initialized baseURL:",base);
         }
         else{
             console.error("❌ Initialized baseURL not set");
