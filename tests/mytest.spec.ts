@@ -10,13 +10,10 @@ import { describe } from 'node:test';
         await expect(page).toHaveTitle("My Shop"); 
 
     })
-      test("Verify page url",async ({page})=>{
+    test("Verify page url",async ({page})=>{
         await page.goto("http://www.automationpractice.pl/index.php")
-
         let url:string = await page.url();
         console.log(url);
         await expect(page).toHaveURL(url);
-
     })
    
-

@@ -1,0 +1,7 @@
+Initialized baseURL: https://reqres.in/
+Request body { name: 'Albert', job: 'Dev' }
+REsponse of API: {
+  error: 'api_key_required',
+  message: 'Create your API key at https://app.reqres.in to access the ReqRes API.',
+  signup_url: 'https://app.reqres.in'
+}

@@ -1,0 +1,6 @@
+{
+    "baseUrl1":"https://reqres.in/",
+    "baseUrl2":"https://restful-booker.herokuapp.com",
+    "baseurl3":"https://jsonplaceholder.typicode.com",
+    "baseurl4":"https://httpbin.org/basic-auth"
+}

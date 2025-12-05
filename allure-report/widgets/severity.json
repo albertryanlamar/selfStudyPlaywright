@@ -1,0 +1,1 @@
+[{"uid":"31c98b0fbf2143cf","name":"TC001: Create User1 and validate.","time":{"start":1764731248254,"stop":1764731248783,"duration":529},"status":"passed","severity":"normal"},{"uid":"b191c9b7f55b678e","name":"TC002: Create User2 and validate.","time":{"start":1764731248835,"stop":1764731249130,"duration":295},"status":"passed","severity":"normal"}]

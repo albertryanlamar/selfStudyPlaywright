@@ -1,0 +1,26 @@
+Initialized baseURL: https://reqres.in/
+Executing Step_1: create_Albert_Developer
+============= Start of Create User ================
+Create User APi Success 201
+
+ ------ creat_user_API API Response Details ------ 
+Base URL: https://reqres.in/api/users
+---------------------------------------------------
+Expected Response Code: 201
+Actual Response Code: 201
+Actual Response: {"name":"Albert","job":"Developer","id":"933","createdAt":"2025-12-04T07:38:13.153Z"}
+---------------------------------------------------
+
+Executing Step_2: validateCreate
+============= Start of Get User ================
+GEt User APi Failed 404
+
+ ------ Get_user_API API Response Details ------ 
+Base URL: https://reqres.in/api/users/933
+---------------------------------------------------
+Expected Response Code: 500
+Actual Response Code: 404
+Actual Response: {}
+---------------------------------------------------
+
+End of Test Steps
