@@ -1,0 +1,19 @@
+{
+    "SCN": 
+    [
+        { 
+            "TC1":{
+                    "Scenario":"Register User1 and Login",
+                    "email": "eve.holt@reqres.in",
+                    "password": "pistol"
+            }
+        },
+        {
+            "TC2":{
+                    "Scenario":"Register User2 and Login",
+                    "email": "sso.holt@reqres.in",
+                    "password": "pistol"
+            }
+        }      
+    ]
+}

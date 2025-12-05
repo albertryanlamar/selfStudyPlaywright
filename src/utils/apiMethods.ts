@@ -13,12 +13,17 @@ export class apiMethods{
         if (!this.client) {
             this.client = await request.newContext({
                 baseURL:base, // use default if no base provided
+                ignoreHTTPSErrors:true
             });
             console.log("Initialized baseURL:",base);
         }
         else{
-            console.error("❌ Initialized baseURL not set");
+            console.error("Initialized baseURL not set");
         }
+    }
+
+    async tearDown(){
+        this.client.dispose();
     }
     
     // method for get
@@ -38,6 +43,11 @@ export class apiMethods{
     async delete(url:string,options:{data?:any,headers?:any,params?:any}={}){
         return await this.client.delete(url,options);
     }
+
+    async patch(url:string,options:{data?:any,headers?:any,params?:any}={}){
+        return await this.client.patch(url,options)
+    }
+    
     
 }
 export default new apiMethods();

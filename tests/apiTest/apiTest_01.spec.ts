@@ -17,6 +17,8 @@ test('Test Get Booking API with path parameters',async(page)=>{
    }
 })
 test('Test Get Booking API with query param',async()=>{
+
+    
     const params = {
         firstname:"sdsdsd",
         lastname:"Brown"

@@ -1,0 +1,19 @@
+{
+    "CreateUser": 
+    [
+        { 
+            "TC1":{
+                    "Scenario":"Create a Developer job and Validate",
+                    "name": "Albert",
+                    "job": "Dev"
+            }
+        },
+        {
+            "TC2":{
+                    "Scenario":"Create a QA job and Validate",
+                    "name": "Albert",
+                    "job": "QA"
+            }
+        }      
+    ]
+}

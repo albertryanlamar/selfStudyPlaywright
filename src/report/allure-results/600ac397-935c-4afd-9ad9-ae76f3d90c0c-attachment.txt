@@ -1,0 +1,4 @@
+Assert Status Failed: Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 500
+Received: 404

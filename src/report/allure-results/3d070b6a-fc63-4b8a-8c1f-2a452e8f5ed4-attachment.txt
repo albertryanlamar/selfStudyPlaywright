@@ -1,0 +1,2 @@
+Initialized baseURL: https://reqres.in/
+Executing Step_1: [object Object]
