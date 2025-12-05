@@ -41,14 +41,14 @@ jobs:
       run: echo "stamp=$(date +'%Y%m%d-%H%M%S')" >> $GITHUB_OUTPUT
 
     - name: Generate Allure Report
-      run: npx allure generate ./allure-results --clean -o "allure-report-${{ steps.ts.outputs.stamp }}"
+      run: npx allure generate src/report/allure-results --clean -o "src/report/allure-reportt-${{ steps.ts.outputs.stamp }}"
 
     - name: Upload Allure Report Artifact
       if: always()
       uses: actions/upload-artifact@v4
       with:
         name: "allure-report-${{ steps.ts.outputs.stamp }}"
-        path: "allure-report-${{ steps.ts.outputs.stamp }}"
+        path: "src/report/allure-report-${{ steps.ts.outputs.stamp }}"
         retention-days: 30
 
     # Still upload Playwright HTML for debugging
