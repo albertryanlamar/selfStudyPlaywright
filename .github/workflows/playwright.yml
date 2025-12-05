@@ -1,15 +1,16 @@
 name: Playwright Tests
+
 on:
   push:
     branches: [main]
   pull_request:
     branches: [main]
+
 jobs:
   test:
     timeout-minutes: 60
     runs-on: windows-latest
 
-    
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v4
@@ -25,11 +26,32 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
 
+    # ------------------------
+    # RUN TESTS + GENERATE ALLURE RESULTS
+    # ------------------------
     - name: Run Playwright tests
-      run: npx playwright test testAPI.spec
-      #run: npx playwright test --grep "@sanity"
-      #run: npm run test:sanity
-    
+      run: npx playwright test testAPI.spec --reporter=line,allure-playwright
+
+    # ------------------------
+    # CREATE UNIQUE FOLDER FOR ALLURE REPORT
+    # ------------------------
+    - name: Generate unique folder name
+      id: ts
+      shell: bash
+      run: echo "stamp=$(date +'%Y%m%d-%H%M%S')" >> $GITHUB_OUTPUT
+
+    - name: Generate Allure Report
+      run: npx allure generate ./allure-results --clean -o "allure-report-${{ steps.ts.outputs.stamp }}"
+
+    - name: Upload Allure Report Artifact
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: "allure-report-${{ steps.ts.outputs.stamp }}"
+        path: "allure-report-${{ steps.ts.outputs.stamp }}"
+        retention-days: 30
+
+    # Still upload Playwright HTML for debugging
     - name: Upload Playwright HTML Report
       if: always()
       uses: actions/upload-artifact@v4
