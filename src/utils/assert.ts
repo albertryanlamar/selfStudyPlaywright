@@ -5,7 +5,7 @@ class assert{
          try{
          expect(res.status()).toBe(status);
          }catch(err){
-          console.log(`Status Error: ${err}`);
+          console.error(`Status Error: ${err}`);
          }
    }
   async bodyProperty(res:any,prop:any){
