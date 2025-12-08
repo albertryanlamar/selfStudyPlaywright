@@ -1,2 +1,0 @@
-Initialized baseURL: https://reqres.in/
-Request body { name: 'Albert', job: 'Dev' }

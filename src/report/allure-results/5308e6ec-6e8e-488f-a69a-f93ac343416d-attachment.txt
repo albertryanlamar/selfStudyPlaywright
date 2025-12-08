@@ -1,3 +1,0 @@
-Initialized baseURL: https://reqres.in/
-Step_1 is empty for TestCase: TC001
-End of Test Steps
